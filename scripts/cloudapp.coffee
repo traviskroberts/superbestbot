@@ -1,3 +1,6 @@
+http://cl.ly/jkbz
+http://cl.ly/jkbz/Screen%20Shot%202017-03-28%20at%201.39.37%20PM.png
+
 # Description:
 #   Allow Hubot to show what's lurking behind a CloudApp link
 #
@@ -15,7 +18,7 @@
 #   lmarburger
 
 module.exports = (robot) ->
-  robot.hear /(https?:\/\/(cl.ly)\/image\/[A-Za-z0-9]+)(\/[^\/]+)?/i, (msg) ->
+  robot.hear /(https?:\/\/cl.ly\/[A-Za-z0-9]+)(\/[^\/]+)?/i, (msg) ->
     return if msg.match[2]  # Ignore already embedded images.
 
     link = msg.match[1]
