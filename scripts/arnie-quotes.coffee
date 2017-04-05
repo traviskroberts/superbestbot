@@ -30,10 +30,10 @@ arnie_quotes = [
 module.exports = (robot) ->
     robot.hear /(^|\s)arnie(\s|$|[\W])/ig, (msg) ->
         val = msg.random odds
-        if val > 50
+        if val > 0 # Set Arnie to reply 100% for now
             msg.send msg.random arnie_quotes
 
     robot.hear /(^|\s)arnold(\s|$|[\W])/ig, (msg) ->
         val = msg.random odds
-        if val > 50
+        if val > 0 # Set Arnie to reply 100% for now
             msg.send msg.random arnie_quotes
