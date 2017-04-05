@@ -213,3 +213,11 @@ module.exports = (robot) ->
     if match != "best" && match != "worst" && match != "all"
       subject = karma.findOrInitialize(match)
       msg.send "\"#{subject}\" has #{karma.get(subject)} karma."
+
+  robot.respond /karma remove (\S+[^-\s])$/i, (msg) ->
+    name = msg.match[1].toLowerCase()
+    if karma.nameOrAliasExists(name)
+      karma.kill(name)
+      msg.send "#{name} has been removed"      
+    else
+      msg.send "#{name} does not exist"
