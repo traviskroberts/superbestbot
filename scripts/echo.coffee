@@ -16,5 +16,5 @@ module.exports = (robot) ->
         # text = text.replace /!/, ""
         # text = text.replace /superbestbot /, "" 
         # msg.send text
-        msg.seng msg.message.text
+        msg.send msg.message.text
         
