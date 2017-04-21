@@ -1,5 +1,5 @@
 # Description:
-#   Listens for words and sometimes replies with an Arnie quote
+#   Listens for mentions of Arnie and replies with an Arnie quote
 #
 # Dependencies:
 #   None
@@ -27,4 +27,6 @@ arnie_quotes = [
 
 module.exports = (robot) ->
     robot.hear /(^|\s)(arnold|arnie)(\s|$|[\W])/ig, (msg) ->
-        msg.send msg.random arnie_quotes
+        quote = msg.random arnie_quotes
+        quote += ' <:arnold:298646907658436609>'
+        msg.send quote
