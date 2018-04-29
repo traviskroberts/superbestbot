@@ -50,5 +50,5 @@ arnie_quotes = [
 module.exports = (robot) ->
     robot.hear /(^|\s)(arnold|arnie)(\s|$|[\W])/ig, (msg) ->
         quote = msg.random arnie_quotes
-        quote += ' <:arnold:298646907658436609>'
+        quote += ' <:sbfvgsArnie:437350773744205844>'
         msg.send quote
